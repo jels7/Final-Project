@@ -1,0 +1,43 @@
+Graph Class Design
+Attributes:
+
+    numVertices: An integer to store the number of vertices in the graph.
+    adjacencyMatrix: A 2D vector to represent the adjacency matrix of the graph where adjacencyMatrix[i][j] is the weight of the edge between vertex i and vertex j.
+
+Methods:
+
+    Constructor:
+        Graph(int vertices): Initializes the graph with a specified number of vertices and creates the adjacency matrix.
+
+    Add Vertex:
+        void addVertex(): Adds a new vertex to the graph. This method resizes the adjacency matrix to accommodate the new vertex.
+
+    Add Edge:
+        void addEdge(int source, int destination): Adds an edge between the source and destination vertices. Since the graph is undirected, the edge is added in both directions.
+
+    Shortest Path:
+        vector<int> shortestPath(int source, int destination): Uses Dijkstra's algorithm to find and return the shortest path from the source to the destination vertex.
+
+    Minimum Spanning Tree:
+        vector<pair<int, int>> minSpanTree(): Uses Prim's algorithm to find and return the edges of the minimum spanning tree.
+
+Tests
+Add Vertex
+
+    Add a single vertex and verify the adjacency matrix size.
+    Add multiple vertices and verify the adjacency matrix size.
+
+Add Edge
+
+    Add an edge between two vertices and verify the adjacency matrix entries.
+    Add an edge where one or both vertices do not exist and verify error handling.
+
+Shortest Path
+
+    Verify the shortest path between two connected vertices.
+    Verify the shortest path returns an appropriate response when no path exists.
+
+Minimum Spanning Tree
+
+    Verify the MST for a simple connected graph.
+    Verify the MST handles graphs with multiple components appropriately.
